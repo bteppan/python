@@ -2,7 +2,7 @@ import random
 
 kõik_katsed = []
 
-while True:
+for i in range(True):
     arv = random.randint(1, 10)
     katse_arv = 0
 
