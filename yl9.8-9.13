@@ -37,7 +37,7 @@ import random
 #          if round(arv1/arv2,1) == v:
 #             punktid+=1
 # 
-# 
+# 9.10
 # if punktid/kysimuste_arv >= 0.5:
 # print(f"A - {punktid}/{kysimuste_arv}")
 #     print("A")
@@ -45,6 +45,7 @@ import random
 #     print("MA")
 # print(punktid)
 
+#9.11
 #1
 # arv = 5
 # for i in range(1,6):
