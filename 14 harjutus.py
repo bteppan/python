@@ -1,41 +1,37 @@
 import turtle
 import math
 
-# Seadista ekraan
-screen = turtle.Screen()
-screen.bgcolor("white")
+t = turtle.Turtle()
+t.speed(0)
+t.width(2)
 
-# Loo kilpkonn
-pen = turtle.Turtle()
-pen.speed(0)
-pen.color("black")
+raadius = 150
+hammaste_arv = 24
+hamba_korgus = 30
 
-# Joonista keskne ring
-pen.penup()
-pen.goto(0, -100)
-pen.pendown()
-pen.circle(100)
+nurk = 360 / 24
 
-# Funktsioon kolmnurga joonistamiseks
-def draw_triangle(x, y, angle, size):
-    pen.penup()
-    pen.goto(x, y)
-    pen.setheading(angle)
-    pen.pendown()
-    for _ in range(3):
-        pen.forward(size)
-        pen.left(120)
+t.penup()
+t.goto(0, -raadius)
+t.setheading(0)
+t.pendown()
 
-# Joonista kolmnurgad ringi ümber
-triangle_count = 60
-radius = 100
-triangle_size = 30
+t.circle(raadius)
 
-for i in range(triangle_count):
-    angle = i * (360 / triangle_count)
-    x = radius * math.cos(math.radians(angle))
-    y = radius * math.sin(math.radians(angle))
-    draw_triangle(x, y, angle, triangle_size)
+for i in range(7):
+    t.penup()
+    t.goto(0, 0)
+    t.setheading(nurk * i)
+    t.forward(raadius)
+    t.pendown()
 
-# Lõpeta
+t.left(90)
+t.forward(20)
+t.right(135)
+t.forward(20* 1.4)
+t.right(90)
+t.forward(20 * 1.4)
+t.right(135)
+t.forward(20)
+
 turtle.done()
