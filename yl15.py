@@ -1,6 +1,8 @@
 import turtle
 import random
 
+skoor = 0
+
 aken = turtle.Screen()
 aken.bgcolor("lightblue")
 aken.setup(width=600, height=600)
@@ -38,15 +40,35 @@ def liigu_paremale():
 
 # ringi funktsioonid
 def peegelda_porkumisel():
+    global skoor
     nurk = ring.heading()
     if ring.xcor() >= 300 or ring.xcor() <= -300:
         uus_nurk = 180 - nurk
         if uus_nurk < 0:
             uus_nurk += 360
         ring.setheading(uus_nurk)
+
     #tee kaheks, kui maad puudub, siis exit
     print(ring.ycor)
     if ring.ycor() >= 300 or ring.ycor() <= -300:
+        uus_nurk = 360 - nurk
+        ring.setheading(uus_nurk)
+    if ring.ycor() <= -300:
+        print("Game Over")
+        #turtle.bye()
+    x = ristkylik.xcor()
+    y = ristkylik.ycor()
+    if (y + 10 >= ring.ycor() and ring.ycor() >= y - 10) and (x + 50 >= ring.xcor() and ring.xcor() >= x - 50):
+    # if (ring.ycor() <= y and ring.ycor()+5 >= y) and (ring.xcor() <= x and ring.xcor()+100 >= x):
+        skoor+=1
+        #skoori kuvamine
+        turtle.hideturtle()
+        turtle.clear()
+        turtle.penup()
+        turtle.goto(-250,200)
+        turtle.pendown()
+        turtle.write(skoor, font=("Arial", 30, "normal"))
+        print("Skoor:",skoor)
         uus_nurk = 360 - nurk
         ring.setheading(uus_nurk)
 
