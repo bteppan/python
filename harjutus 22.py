@@ -16,3 +16,18 @@ if vanus_aastates%5==0:
     print("Sul on juubel!")
 else:
     print("sul ei ole juubel!!")
+
+import csv
+
+autode_arv = 0
+faili_nimi = 'rentals.csv'
+open
+reader
+skipi_esimene
+kuva testisaamiseks read, kommi välja
+    suureanda autode arvu
+    kui id pole, siis
+        lisan 8 tulba klientidesse
+
+print(f"Rentide arv kokku: {autode_arv}")
+print(f"Unikaalseid kliente: {len(kliendid)}")
