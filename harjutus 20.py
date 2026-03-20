@@ -1,10 +1,12 @@
 import requests
 
-city = input("Sisesta linn: ")
+# API võtme ja linna nime määramine
+city = input("Lisa otsitav asukoht: ")
 city = city.strip().capitalize()
-print("Sinu otsing:", city)
-api_key = "4d00708d8381327a02ef762111e07e20"
+print("Otsitav linn", city)
+api_key = "bd1912ded1563ba02eea1e9496ad7ae8"
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+
 
 # API päringu tegemine
 response = requests.get(url)
