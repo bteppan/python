@@ -27,7 +27,5 @@ def todo():
 
         print("Tehtud ülesannete arv:", tehtud)
         print("Koguarv:", kokku)
-        protsent = (tehtud / kokku) * 100
-        print(f"Tehtud ülesannete protsent: {protsent:.2f}%")
 
 todo()
